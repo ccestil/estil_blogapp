@@ -1,12 +1,18 @@
-<h1>New blog!</h1>
+<x-layout>
 
-<form action="{{ route('posts.store') }}" method="POST">
-    @csrf
+    <div class="container">
+        <h1>New blog!</h1>
 
-  <label for="title">Blog title: </label> <br>
-  <input type="text" name="title" value="{{ old('title') }}"><br><br>
+        <form action="{{ route('posts.store') }}" method="POST">
+            @csrf
 
-  <textarea  name="body" rows="4" cols="50" value="{{ old('body') }}"></textarea>
-  <br><br>
-  <input type="submit" value="create">
-</form>
+            <label for="title">Blog title: </label> <br>
+            <input type="text" name="title" value="{{ old('title') }}"><br><br>
+
+            <textarea name="body" rows="4" cols="50" value="{{ old('body') }}"></textarea>
+            <br><br>
+            <input type="submit" value="create">
+        </form>
+
+    </div>
+</x-layout>

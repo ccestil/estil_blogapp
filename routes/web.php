@@ -9,3 +9,5 @@ Route::get('/', function () {
 
 Route::resource('posts', PostController::class);
 
+Route::get('/posts/{id}', [PostController::class, 'show']);
+
